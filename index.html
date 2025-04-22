@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco-Friendly Smart City</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌍 Eco-Friendly Smart City</h1>
+    <nav>
+      <a href="#info-section">Dashboard</a>
+      <a href="#data-section">Energy Data</a>
+      <a href="#map-section">Map</a>
+      <a href="#news-section">News</a>
+      <a href="#events-section">Events</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+    <div class="card" onclick="showInfo('energy')">⚡ Energy</div>
+    <div class="card" onclick="showInfo('transport')">🚗 Transport</div>
+    <div class="card" onclick="showInfo('waste')">♻ Waste</div>
+    <div class="card" onclick="showInfo('water')">💧 Water</div>
+    <div class="card" onclick="showInfo('green')">🌳 Green Spaces</div>
+  </section>
+
+  <section id="info-section">
+    <h2>Details</h2>
+    <p id="info-text">Click a section to view smart eco tips!</p>
+  </section>
+
+  <section id="data-section">
+    <h2>📊 Renewable Energy Usage</h2>
+    <canvas id="energyChart" width="400" height="200"></canvas>
+  </section>
+
+  <section id="map-section">
+    <h2>📍 Smart City Green Zones</h2>
+    <div class="map-placeholder">[Interactive Map Placeholder]</div>
+  </section>
+
+  <section id="news-section">
+    <h2>📰 Eco News</h2>
+    <ul id="news-list"></ul>
+  </section>
+
+  <section id="events-section">
+    <h2>📅 Upcoming Eco Events</h2>
+    <ul id="events-list"></ul>
+  </section>
+
+  <section class="calculator">
+    <h2>🧮 Carbon Footprint Estimator</h2>
+    <label>Electricity Use (kWh): <input type="number" id="electricity" /></label>
+    <button onclick="calculateCarbon()">Estimate</button>
+    <p id="carbon-output"></p>
+  </section>
+
+  <section id="feedback" class="feedback">
+    <h2>Give Us Your Feedback 🌱</h2>
+    <form id="feedback-form">
+      <input type="text" placeholder="Your Name" required />
+      <textarea placeholder="Your Eco Idea..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Smart City Project | Raju Kumar</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
